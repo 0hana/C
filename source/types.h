@@ -1,5 +1,4 @@
-/*
-MIT License
+/* MIT License
 
 Copyright (C) Zero Hanami
 
@@ -19,22 +18,26 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*/
+SOFTWARE. */
 
 #ifndef _0hana_types_
 
 #include <stddef.h>
 #include <stdint.h>
 
+
 typedef uint8_t byte;
-extern  int16_t const * const big_endian;
-#define little_endian ((*big_endian) == ' ')
+#define \
+little_endian \
+little_endian()
+static inline byte little_endian { return *(int16_t const * const)" " == ' '; }
+
 
 void endian_mirror
 ( size_t bytes
 , byte * datum
 ) ;
+
 
 #define _0hana_L_PARENTHESIS_ (
 #define _0hana_R_PARENTHESIS_ )
@@ -51,6 +54,7 @@ void endian_mirror
     __VA_OPT__(_0hana_R_PARENTHESIS_)__VA_OPT__((__VA_ARGS__)); \
   }
 #define relax(variable) variable##_0hana_unconst_
+
 
 #define _0hana_types_
 #endif//_0hana_types_

@@ -1,5 +1,4 @@
-/*
-MIT License
+/* MIT License
 
 Copyright (C) Zero Hanami
 
@@ -19,22 +18,20 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*/
+SOFTWARE. */
 
 #include "0hana/types.h"
 
-int16_t const * const big_endian = ((int16_t const * const)" ");
 
 void endian_mirror
 ( size_t bytes
 , byte * datum
 )
-{
-  while ( bytes-- > 1 )
+{ while( bytes-- > 1 )
   {
-    byte X         = datum[bytes];
-    datum[bytes--] = *datum;
-    *datum++       = X;
+  ;  byte X         =  datum[bytes]
+  ;  datum[bytes--] = *datum
+  ; *datum++        =  X
+  ;
   }
 }
